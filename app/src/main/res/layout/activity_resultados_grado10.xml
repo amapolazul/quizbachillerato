@@ -1,0 +1,78 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@drawable/resultados"
+    tools:context="com.amapolazul.www.quizbachillerato.negocio.preguntas.grado10.ResultadosGrado10">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/idg10"
+        android:layout_marginTop="204dp"
+        android:src="@drawable/grado10"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/menuResultados10"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="129dp"
+        android:src="@drawable/menu10" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:id="@+id/idResultadosLenguaje"
+        android:layout_marginTop="120dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginEnd="60dp"
+        android:textSize="25dp"
+        android:layout_below="@+id/idg10"
+        android:layout_alignRight="@+id/idg10"
+        android:layout_alignEnd="@+id/idg10"
+        android:textColor="#ff000000" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:id="@+id/idResultadosCiencias"
+        android:layout_below="@+id/idResultadosLenguaje"
+        android:layout_alignLeft="@+id/idResultadosLenguaje"
+        android:layout_alignStart="@+id/idResultadosLenguaje"
+        android:layout_marginTop="115dp"
+        android:textColor="#ff000000"
+        android:textSize="25dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:id="@+id/idResultadosSociales"
+        android:layout_below="@+id/idResultadosCiencias"
+        android:layout_alignLeft="@+id/idResultadosCiencias"
+        android:layout_alignStart="@+id/idResultadosCiencias"
+        android:layout_marginTop="120dp"
+        android:textColor="#ff000000"
+        android:textSize="25dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:id="@+id/idResultadosMatematicas"
+        android:layout_marginBottom="58dp"
+        android:textSize="25dp"
+        android:textColor="#ff000000"
+        android:layout_above="@+id/menuResultados10"
+        android:layout_alignLeft="@+id/idResultadosSociales"
+        android:layout_alignStart="@+id/idResultadosSociales" />
+
+</RelativeLayout>

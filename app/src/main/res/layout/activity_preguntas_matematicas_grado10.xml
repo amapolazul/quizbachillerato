@@ -1,0 +1,201 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@drawable/fondo"
+    tools:context="com.amapolazul.www.quizbachillerato.negocio.preguntas.grado10.PreguntasMatematicasGrado10">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imagenDiez"
+        android:src="@drawable/diez"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="30dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imagenMatematicasGrado10"
+        android:src="@drawable/matematicas"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imagenMenuGrado10"
+        android:src="@drawable/menu10"
+        android:layout_alignTop="@+id/imagenDiez"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="30dp"
+        android:onClick="regresar" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:id="@+id/contadorCorrectasMatematicasGrado10"
+        android:layout_below="@+id/imagenDiez"
+        android:layout_alignLeft="@+id/imagenDiez"
+        android:layout_alignStart="@+id/imagenDiez"
+        android:layout_marginTop="128dp"
+        android:layout_alignRight="@+id/imagenDiez"
+        android:layout_alignEnd="@+id/imagenDiez"
+        android:gravity="center|center_vertical|center_horizontal"
+        android:height="45dp"
+        android:textSize="30dp"
+        android:textColor="#ff000000" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:id="@+id/contadorIncorrectasMatematicasGrado10"
+        android:layout_below="@+id/contadorCorrectasMatematicasGrado10"
+        android:layout_alignLeft="@+id/contadorCorrectasMatematicasGrado10"
+        android:layout_alignStart="@+id/contadorCorrectasMatematicasGrado10"
+        android:layout_marginTop="65dp"
+        android:textSize="30dp"
+        android:layout_alignRight="@+id/contadorCorrectasMatematicasGrado10"
+        android:layout_alignEnd="@+id/contadorCorrectasMatematicasGrado10"
+        android:textColor="#ff000000"
+        android:gravity="center|center_vertical" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Texto"
+        android:id="@+id/enunciadoMatematicasG10"
+        android:layout_marginTop="40dp"
+        android:width="500dp"
+        android:layout_below="@+id/imagenDiez"
+        android:layout_toRightOf="@+id/imagenDiez"
+        android:layout_toEndOf="@+id/imagenDiez"
+        android:layout_marginLeft="77dp"
+        android:layout_marginStart="77dp"
+        android:height="280dp"
+        android:scrollbars = "vertical"
+        android:maxLines="12"
+        android:fadeScrollbars="false"
+        android:textColor="#ff000000"
+        android:textSize="20dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/respuestaa"
+        android:layout_marginTop="221dp"
+        android:src="@drawable/respuestaa"
+        android:layout_below="@+id/enunciadoMatematicasG10"
+        android:layout_centerHorizontal="true"
+        android:onClick="responderConA" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/respuestab"
+        android:src="@drawable/respuestab"
+        android:layout_below="@+id/respuestaa"
+        android:layout_alignLeft="@+id/respuestac"
+        android:layout_alignStart="@+id/respuestac"
+        android:onClick="responderConB" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/respuestac"
+        android:src="@drawable/respuestac"
+        android:layout_below="@+id/respuestaa"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="115dp"
+        android:onClick="responderConC" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/respuestad"
+        android:layout_below="@+id/respuestac"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/respuestad"
+        android:onClick="responderConD" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="respuesta 1"
+        android:id="@+id/respuestaAMatematicasG10"
+        android:layout_alignTop="@+id/respuestaa"
+        android:layout_above="@+id/respuestac"
+        android:layout_toRightOf="@+id/contadorIncorrectasMatematicasGrado10"
+        android:layout_alignRight="@+id/respuestaa"
+        android:layout_alignEnd="@+id/respuestaa"
+        android:gravity="center_vertical"
+        android:paddingLeft="45dp"
+        android:textColor="#ff000000"
+        android:textSize="18dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="respuesta 2"
+        android:id="@+id/respuestaBMatematicasG10"
+        android:layout_below="@+id/respuestaa"
+        android:layout_alignLeft="@+id/respuestaAMatematicasG10"
+        android:layout_alignStart="@+id/respuestaAMatematicasG10"
+        android:layout_alignRight="@+id/respuestaa"
+        android:layout_alignEnd="@+id/respuestaa"
+        android:layout_alignBottom="@+id/respuestab"
+        android:textSize="18dp"
+        android:textColor="#ff000000"
+        android:gravity="center_vertical"
+        android:paddingLeft="45dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="respuesta 3"
+        android:id="@+id/respuestaCMatematicasG10"
+        android:layout_alignTop="@+id/respuestac"
+        android:layout_alignRight="@+id/respuestab"
+        android:layout_alignEnd="@+id/respuestab"
+        android:layout_above="@+id/respuestad"
+        android:layout_alignLeft="@+id/respuestaBMatematicasG10"
+        android:layout_alignStart="@+id/respuestaBMatematicasG10"
+        android:paddingLeft="45dp"
+        android:gravity="center_vertical"
+        android:textColor="#ff000000"
+        android:textSize="18dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="respuesta 4"
+        android:id="@+id/respuestaDMatematicasG10"
+        android:layout_below="@+id/respuestac"
+        android:layout_toRightOf="@+id/contadorIncorrectasMatematicasGrado10"
+        android:layout_alignRight="@+id/respuestac"
+        android:layout_alignEnd="@+id/respuestac"
+        android:layout_alignBottom="@+id/respuestad"
+        android:gravity="center_vertical"
+        android:paddingLeft="45dp"
+        android:textSize="18dp"
+        android:textColor="#ff000000" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imagenAyudas"
+        android:src="@drawable/quizuno"
+        android:layout_above="@+id/respuestaAMatematicasG10"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="51dp"
+        android:onClick="abrirAyuda" />
+
+</RelativeLayout>

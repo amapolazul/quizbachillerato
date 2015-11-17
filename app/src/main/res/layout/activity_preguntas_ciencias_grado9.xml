@@ -1,0 +1,201 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    android:paddingBottom="0dp"
+    android:background="@drawable/fondo"
+    tools:context="com.amapolazul.www.quizbachillerato.negocio.preguntas.grado9.PreguntasCienciasGrado9">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imagenNueve"
+        android:src="@drawable/nueve"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="30dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imagenCienciasGrado9"
+        android:src="@drawable/ciencias"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imagenMenuGrado9"
+        android:src="@drawable/menu9"
+        android:layout_alignTop="@+id/imagenNueve"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="30dp"
+        android:onClick="regresar" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:id="@+id/contadorCorrectasCienciasGrado9"
+        android:layout_below="@+id/imagenNueve"
+        android:layout_alignLeft="@+id/imagenNueve"
+        android:layout_alignStart="@+id/imagenNueve"
+        android:layout_marginTop="128dp"
+        android:layout_alignRight="@+id/imagenNueve"
+        android:layout_alignEnd="@+id/imagenNueve"
+        android:gravity="center|center_vertical|center_horizontal"
+        android:height="45dp"
+        android:textSize="30dp"
+        android:textColor="#ff000000" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:id="@+id/contadorIncorrectasCienciasGrado9"
+        android:layout_below="@+id/contadorCorrectasCienciasGrado9"
+        android:layout_alignLeft="@+id/contadorCorrectasCienciasGrado9"
+        android:layout_alignStart="@+id/contadorCorrectasCienciasGrado9"
+        android:layout_marginTop="65dp"
+        android:textSize="30dp"
+        android:layout_alignRight="@+id/contadorCorrectasCienciasGrado9"
+        android:layout_alignEnd="@+id/contadorCorrectasCienciasGrado9"
+        android:textColor="#ff000000"
+        android:gravity="center|center_vertical" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Texto"
+        android:id="@+id/enunciadoCienciasG9"
+        android:layout_marginTop="40dp"
+        android:width="500dp"
+        android:layout_below="@+id/imagenNueve"
+        android:layout_toRightOf="@+id/imagenNueve"
+        android:layout_toEndOf="@+id/imagenNueve"
+        android:layout_marginLeft="77dp"
+        android:layout_marginStart="77dp"
+        android:height="280dp"
+        android:scrollbars = "vertical"
+        android:maxLines="12"
+        android:fadeScrollbars="false"
+        android:textColor="#ff000000"
+        android:textSize="20dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/respuestaa"
+        android:layout_marginTop="221dp"
+        android:src="@drawable/respuestaa"
+        android:layout_below="@+id/enunciadoCienciasG9"
+        android:layout_centerHorizontal="true"
+        android:onClick="responderConA" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/respuestab"
+        android:src="@drawable/respuestab"
+        android:layout_below="@+id/respuestaa"
+        android:layout_alignLeft="@+id/respuestac"
+        android:layout_alignStart="@+id/respuestac"
+        android:onClick="responderConB" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/respuestac"
+        android:src="@drawable/respuestac"
+        android:layout_below="@+id/respuestaa"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="115dp"
+        android:onClick="responderConC" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/respuestad"
+        android:layout_below="@+id/respuestac"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/respuestad"
+        android:onClick="responderConD" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="respuesta 1"
+        android:id="@+id/respuestaACienciasG9"
+        android:layout_alignTop="@+id/respuestaa"
+        android:layout_above="@+id/respuestac"
+        android:layout_toRightOf="@+id/contadorIncorrectasCienciasGrado9"
+        android:layout_alignRight="@+id/respuestaa"
+        android:layout_alignEnd="@+id/respuestaa"
+        android:gravity="center_vertical"
+        android:paddingLeft="45dp"
+        android:textColor="#ff000000"
+        android:textSize="18dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="respuesta 2"
+        android:id="@+id/respuestaBCienciasG9"
+        android:layout_below="@+id/respuestaa"
+        android:layout_alignLeft="@+id/respuestaACienciasG9"
+        android:layout_alignStart="@+id/respuestaACienciasG9"
+        android:layout_alignRight="@+id/respuestaa"
+        android:layout_alignEnd="@+id/respuestaa"
+        android:layout_alignBottom="@+id/respuestab"
+        android:textSize="18dp"
+        android:textColor="#ff000000"
+        android:gravity="center_vertical"
+        android:paddingLeft="45dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="respuesta 3"
+        android:id="@+id/respuestaCCienciasG9"
+        android:layout_alignTop="@+id/respuestac"
+        android:layout_alignRight="@+id/respuestab"
+        android:layout_alignEnd="@+id/respuestab"
+        android:layout_above="@+id/respuestad"
+        android:layout_alignLeft="@+id/respuestaBCienciasG9"
+        android:layout_alignStart="@+id/respuestaBCienciasG9"
+        android:paddingLeft="45dp"
+        android:gravity="center_vertical"
+        android:textColor="#ff000000"
+        android:textSize="18dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="respuesta 4"
+        android:id="@+id/respuestaDCienciasG9"
+        android:layout_below="@+id/respuestac"
+        android:layout_toRightOf="@+id/contadorIncorrectasCienciasGrado9"
+        android:layout_alignRight="@+id/respuestac"
+        android:layout_alignEnd="@+id/respuestac"
+        android:layout_alignBottom="@+id/respuestad"
+        android:gravity="center_vertical"
+        android:paddingLeft="45dp"
+        android:textSize="18dp"
+        android:textColor="#ff000000" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imagenAyudas"
+        android:src="@drawable/quizuno"
+        android:layout_above="@+id/respuestaACienciasG9"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="51dp"
+        android:onClick="abrirAyuda" />
+
+</RelativeLayout>
