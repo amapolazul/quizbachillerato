@@ -3,6 +3,8 @@ package com.amapolazul.www.quizbachillerato.negocio.preguntas.grado8;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Intent;
+import android.content.res.Resources;
+import android.graphics.drawable.Drawable;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
@@ -93,11 +95,11 @@ public class PreguntasMatematicasGrado8 extends Activity {
         TextView respuestaC = (TextView) findViewById(R.id.respuestaCMatematicasG8);
         TextView respuestaD = (TextView) findViewById(R.id.respuestaDMatematicasG8);
 
-        enunciado.setText(preguntaActual.getEnunciado().replace("<br>", Html.fromHtml("<br />")));
-        respuestaA.setText(preguntaActual.getRespuestaA());
-        respuestaB.setText(preguntaActual.getRespuestaB());
-        respuestaC.setText(preguntaActual.getRespuestaC());
-        respuestaD.setText(preguntaActual.getRespuestaD());
+        enunciado.setText(Html.fromHtml(preguntaActual.getEnunciado()));
+        respuestaA.setText(Html.fromHtml(preguntaActual.getRespuestaA()));
+        respuestaB.setText(Html.fromHtml(preguntaActual.getRespuestaB()));
+        respuestaC.setText(Html.fromHtml(preguntaActual.getRespuestaC()));
+        respuestaD.setText(Html.fromHtml(preguntaActual.getRespuestaD()));
         mostrarImagenAyuda();
     }
 
@@ -204,7 +206,18 @@ public class PreguntasMatematicasGrado8 extends Activity {
             imageView.setImageResource(R.drawable.verimagen);
         } else if (preguntaActual.tieneLectura()){
             imageView.setImageResource(R.drawable.verlectura);
+        } else {
+            imageView.setImageResource(R.drawable.quizuno);
         }
+    }
+
+    private Drawable getDrawableByName(String name){
+        System.out.println("name imagen" + name);
+        Resources res = getResources();
+        String mDrawableName = name;
+        int resID = res.getIdentifier(mDrawableName , "drawable", getPackageName());
+        Drawable drawable = res.getDrawable(resID );
+        return drawable;
     }
 
     public void abrirAyuda(View view){
@@ -213,7 +226,8 @@ public class PreguntasMatematicasGrado8 extends Activity {
             busyDialog.setContentView(R.layout.lightbox_image);
 
             ImageView imagen = (ImageView) busyDialog.findViewById(R.id.imagenAyudaLightBox);
-            imagen.setImageResource(Integer.parseInt(preguntaActual.getImagen()));
+            Drawable drawableImagen = getDrawableByName(preguntaActual.getImagen());
+            imagen.setImageDrawable(drawableImagen);
 
             ImageView dismissDialogImageView = (ImageView)busyDialog.findViewById(R.id.cerrarImagen);
             dismissDialogImageView.setOnClickListener(new ImageView.OnClickListener() {
@@ -230,7 +244,7 @@ public class PreguntasMatematicasGrado8 extends Activity {
             busyDialog.setContentView(R.layout.lightbox_dialog);
 
             TextView lecturaGradoUno = (TextView) busyDialog.findViewById(R.id.contenidoLectua);
-            lecturaGradoUno.setText(preguntaActual.getLectura());
+            lecturaGradoUno.setText(Html.fromHtml(preguntaActual.getLectura()));
 
             ImageView dismissDialogImageView = (ImageView)busyDialog.findViewById(R.id.cerrarLectura);
             dismissDialogImageView.setOnClickListener(new ImageView.OnClickListener() {

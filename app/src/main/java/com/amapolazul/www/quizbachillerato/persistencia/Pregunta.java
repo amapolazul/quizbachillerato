@@ -106,10 +106,10 @@ public class Pregunta {
     }
 
     public boolean tieneLectura(){
-        return (this.lectura != null && !this.lectura.equals(""));
+        return (this.lectura != null && !this.lectura.equals("NA"));
     }
 
     public boolean tieneImagen(){
-        return (this.imagen != null && !this.imagen.equals(""));
+        return (this.imagen != null && !this.imagen.equals("NA"));
     }
 }
