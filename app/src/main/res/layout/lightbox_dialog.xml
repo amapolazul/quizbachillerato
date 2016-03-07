@@ -43,7 +43,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="sadfdsf ss fsdfsdfsd fsd dgdfgdfgd g dg dfgd gds gsdf gd gd "
+            android:text="asdasdssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss\nasdasd\nasdasd\nasdasd\nasdasd\nasdasd\nasdasd\nasdasd\nasdasd\nasdasd\nasdasd\nasdasd\nasdasd\nasdasd\nasdasd\nasdasd\nasdasd\nasdasd\nasdasd\nasdasd\nasdasd\nasdasd\nasdasd\nasdasd\nasdasd\nasdasd\nasdasd\nasdasd\nasdasd\nasdasd\nasdasd\nasdasd\nasdasd\nasdasd\nasdasd\nasdasd\nasdasd\nasdasd\nasdasd\nasdasd\nasdasd\nasdasd\nasdasd\nasdasd\nasdasd\nasdasd\nasdasd\nasdasd\nasdasd\n"
             android:id="@+id/contenidoLectua"
             android:layout_alignTop="@+id/imageView10"
             android:layout_alignLeft="@+id/imageView10"
@@ -56,10 +56,11 @@
             android:paddingTop="70dp"
             android:background="@color/translucent"
             android:scrollbars = "vertical"
-            android:maxLines="25"
+            android:maxLines="35"
             android:fadeScrollbars="false"
             android:textSize="25dp"
-            android:textColor="#ff000000" />
+            android:textColor="#ff000000"
+            android:width="600dp" />
 
         <ImageView
             android:layout_width="wrap_content"

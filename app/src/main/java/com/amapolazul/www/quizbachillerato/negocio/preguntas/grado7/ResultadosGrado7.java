@@ -1,15 +1,19 @@
 package com.amapolazul.www.quizbachillerato.negocio.preguntas.grado7;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 
 import com.amapolazul.www.quizbachillerato.R;
+import com.amapolazul.www.quizbachillerato.intro.IntroGrados;
 import com.amapolazul.www.quizbachillerato.negocio.contador.Contador;
 
-public class ResultadosGrado7 extends ActionBarActivity {
+public class ResultadosGrado7 extends Activity {
 
     private Contador contador;
 
@@ -29,6 +33,11 @@ public class ResultadosGrado7 extends ActionBarActivity {
         textView1.setText(String.valueOf(contador.getCorrectasMatematicas()));
         textView2.setText(String.valueOf(contador.getCorrectasCiencias()));
         textView3.setText(String.valueOf(contador.getCorrectasSociales()));
+    }
+
+    public void regresar(View view){
+        Intent intent = new Intent(this, IntroGrados.class);
+        startActivity(intent);
     }
 
 

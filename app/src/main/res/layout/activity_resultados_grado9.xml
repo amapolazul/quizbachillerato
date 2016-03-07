@@ -23,7 +23,8 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="129dp"
-        android:src="@drawable/menu9" />
+        android:src="@drawable/menu9"
+        android:onClick="regresar" />
 
     <TextView
         android:layout_width="wrap_content"

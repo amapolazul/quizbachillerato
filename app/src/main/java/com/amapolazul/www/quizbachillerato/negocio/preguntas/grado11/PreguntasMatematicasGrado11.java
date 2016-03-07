@@ -64,18 +64,6 @@ public class PreguntasMatematicasGrado11 extends Activity {
             quizDao = new QuizDAO(this);
             quizDao.open();
             preguntasMatematicasGrado11 = quizDao.darPreguntas(CategoriasEnum.MATEMATICAS.getValor(), "11");
-//            preguntaActual = new Pregunta();
-//            preguntaActual.setCategoria("Matematicas");
-//            preguntaActual.setRespuestaCorrecta("A");
-//            preguntaActual.setRespuestaC("sdfsdf");
-//            preguntaActual.setEnunciado("Enunciado asdad");
-//            preguntaActual.setGrado("6");
-//            preguntaActual.setImagen("");
-//            preguntaActual.setRespuestaA("edfr");
-//            preguntaActual.setRespuestaB("edfr");
-//            preguntaActual.setRespuestaD("edfr");
-//            preguntaActual.setLectura("gdfgd");
-//            preguntaActual.setId(2340L);
             inicializarQuiz();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -244,6 +232,7 @@ public class PreguntasMatematicasGrado11 extends Activity {
             busyDialog.setContentView(R.layout.lightbox_dialog);
 
             TextView lecturaGradoUno = (TextView) busyDialog.findViewById(R.id.contenidoLectua);
+            lecturaGradoUno.setMovementMethod(new ScrollingMovementMethod());
             lecturaGradoUno.setText(Html.fromHtml(preguntaActual.getLectura()));
 
             ImageView dismissDialogImageView = (ImageView)busyDialog.findViewById(R.id.cerrarLectura);

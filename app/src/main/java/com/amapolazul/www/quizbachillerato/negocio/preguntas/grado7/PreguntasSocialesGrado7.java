@@ -193,7 +193,7 @@ public class PreguntasSocialesGrado7 extends Activity {
         if(indicePrguntaActual < preguntasSocialesGrado7.size()){
             inicializarQuiz();
         } else {
-            Intent intent = new Intent(this, PreguntasSocialesGrado7.class);
+            Intent intent = new Intent(this, ResultadosGrado7.class);
             startActivity(intent);
         }
     }
@@ -244,6 +244,7 @@ public class PreguntasSocialesGrado7 extends Activity {
             busyDialog.setContentView(R.layout.lightbox_dialog);
 
             TextView lecturaGradoUno = (TextView) busyDialog.findViewById(R.id.contenidoLectua);
+            lecturaGradoUno.setMovementMethod(new ScrollingMovementMethod());
             lecturaGradoUno.setText(Html.fromHtml(preguntaActual.getLectura()));
 
             ImageView dismissDialogImageView = (ImageView)busyDialog.findViewById(R.id.cerrarLectura);

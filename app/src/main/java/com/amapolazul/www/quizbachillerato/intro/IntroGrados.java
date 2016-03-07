@@ -9,6 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.amapolazul.www.quizbachillerato.R;
+import com.amapolazul.www.quizbachillerato.negocio.contador.Contador;
 import com.amapolazul.www.quizbachillerato.negocio.preguntas.grado10.PreguntasMatematicasGrado10;
 import com.amapolazul.www.quizbachillerato.negocio.preguntas.grado11.PreguntasMatematicasGrado11;
 import com.amapolazul.www.quizbachillerato.negocio.preguntas.grado6.PreguntasMatematicasGrado6;
@@ -18,10 +19,15 @@ import com.amapolazul.www.quizbachillerato.negocio.preguntas.grado9.PreguntasMat
 
 public class IntroGrados extends Activity {
 
+    private Contador contador;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_intro_grados);
+
+        contador= Contador.getInstance();
+        contador.reiniciarContador();
     }
 
     public void irAGrado6(View view){

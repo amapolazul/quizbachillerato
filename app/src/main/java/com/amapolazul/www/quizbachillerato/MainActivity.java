@@ -8,9 +8,11 @@ import android.content.res.AssetManager;
 import android.os.AsyncTask;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 import com.amapolazul.www.quizbachillerato.intro.IntroGrados;
 import com.amapolazul.www.quizbachillerato.negocio.contador.Contador;
@@ -34,6 +36,9 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+//        TextView t = (TextView)findViewById(R.id.testSymbols);
+//        t.setText(Html.fromHtml("&#8730;<span style=\"text-decoration:overline;\">2</span>"));
         pd = new ProgressDialog(this);
         pd.setMessage("Cargando preguntas");
         pd.setTitle("Quiz");
@@ -61,7 +66,7 @@ public class MainActivity extends Activity {
             try {
                 quizDao.open();
                 try {
-                    InputStream csvStream = assetManager.open("sexto.csv");
+                    InputStream csvStream = assetManager.open("preguntas.csv");
                     InputStreamReader csvStreamReader = new InputStreamReader(csvStream);
                     BufferedReader reader = new BufferedReader(csvStreamReader);
                     quizDao.open();
@@ -69,7 +74,7 @@ public class MainActivity extends Activity {
                     String line;
                     if(quizDao.darPreguntas("ciencias", "6") == null) {
                         while ((line = reader.readLine()) != null) {
-                            String[] array = line.split("&");
+                            String[] array = line.split("@");
                             System.out.println("agregando linea " + line);
                             Pregunta pregunta = new Pregunta();
                             pregunta.setEnunciado(array[0]);
